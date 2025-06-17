@@ -32,13 +32,13 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 bg-slate-800/30">
+    <section id="projects" className="py-20 px-4 bg-purple-800/20">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-white text-center mb-16">Featured Projects</h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="bg-slate-800/50 border-slate-700 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105">
+            <Card key={index} className="bg-slate-800/50 border-purple-700 hover:bg-slate-800/70 transition-all duration-300 hover:scale-105">
               <CardHeader>
                 <CardTitle className="text-white text-xl mb-3">{project.title}</CardTitle>
                 <p className="text-slate-300 leading-relaxed">{project.description}</p>
@@ -46,10 +46,10 @@ const Projects = () => {
               <CardContent>
                 <div className="space-y-4">
                   <div>
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Technologies</h4>
+                    <h4 className="text-sm font-semibold text-teal-400 mb-2">Technologies</h4>
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" className="bg-blue-900/50 text-blue-300">
+                        <Badge key={tech} variant="secondary" className="bg-purple-900/50 text-purple-300">
                           {tech}
                         </Badge>
                       ))}
@@ -57,11 +57,11 @@ const Projects = () => {
                   </div>
                   
                   <div>
-                    <h4 className="text-sm font-semibold text-blue-400 mb-2">Key Features</h4>
+                    <h4 className="text-sm font-semibold text-teal-400 mb-2">Key Features</h4>
                     <ul className="text-slate-300 text-sm space-y-1">
                       {project.features.map((feature, idx) => (
                         <li key={idx} className="flex items-start">
-                          <span className="text-blue-400 mr-2">•</span>
+                          <span className="text-purple-400 mr-2">•</span>
                           {feature}
                         </li>
                       ))}

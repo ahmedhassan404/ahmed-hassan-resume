@@ -53,7 +53,7 @@ const Skills = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="bg-slate-800/50 border-slate-700">
+            <Card key={index} className="bg-slate-800/50 border-teal-700">
               <CardHeader>
                 <CardTitle className="text-white text-xl">{category.title}</CardTitle>
               </CardHeader>
@@ -63,7 +63,7 @@ const Skills = () => {
                     <div key={skill.name}>
                       <div className="flex justify-between mb-2">
                         <span className="text-slate-300">{skill.name}</span>
-                        <span className="text-blue-400">{skill.level}%</span>
+                        <span className="text-purple-400">{skill.level}%</span>
                       </div>
                       <Progress value={skill.level} className="h-2" />
                     </div>
@@ -74,14 +74,14 @@ const Skills = () => {
           ))}
         </div>
         
-        <Card className="bg-slate-800/50 border-slate-700">
+        <Card className="bg-slate-800/50 border-teal-700">
           <CardHeader>
             <CardTitle className="text-white text-xl">Core Concepts</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-3">
               {concepts.map((concept) => (
-                <span key={concept} className="px-4 py-2 bg-blue-900/50 text-blue-300 rounded-lg text-sm font-medium">
+                <span key={concept} className="px-4 py-2 bg-teal-900/50 text-teal-300 rounded-lg text-sm font-medium">
                   {concept}
                 </span>
               ))}
