@@ -20,23 +20,23 @@ const About = () => {
             </p>
           </div>
           
-          <Card className="bg-slate-800/50 border-purple-700">
+          <Card className="bg-slate-800/50 border-orange-700">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Education</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <GraduationCap className="h-6 w-6 text-teal-400 mt-1" />
+                  <GraduationCap className="h-6 w-6 text-blue-400 mt-1" />
                   <div>
                     <h4 className="text-lg font-semibold text-white">Bachelor of Science in Computer Science</h4>
                     <p className="text-slate-300">Alexandria University</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Calendar className="h-5 w-5 text-purple-400" />
+                  <Calendar className="h-5 w-5 text-orange-400" />
                   <span className="text-slate-300">Sept 2022 - May 2026</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="h-5 w-5 text-teal-400" />
+                  <MapPin className="h-5 w-5 text-blue-400" />
                   <span className="text-slate-300">Alexandria, Egypt</span>
                 </div>
               </div>
@@ -45,7 +45,7 @@ const About = () => {
                 <h4 className="text-lg font-semibold text-white mb-3">Coursework</h4>
                 <div className="flex flex-wrap gap-2">
                   {["Databases", "OOP", "Data Structures", "Algorithms", "Operating Systems", "Software Engineering"].map((course) => (
-                    <span key={course} className="px-3 py-1 bg-purple-900/50 text-purple-300 rounded-full text-sm">
+                    <span key={course} className="px-3 py-1 bg-orange-900/50 text-orange-300 rounded-full text-sm">
                       {course}
                     </span>
                   ))}

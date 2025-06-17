@@ -52,13 +52,13 @@ const Contact = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Card className="bg-slate-800/50 border-purple-700">
+            <Card className="bg-slate-800/50 border-orange-700">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">Contact Information</h3>
                 <div className="space-y-4">
                   {contactInfo.map((item, index) => (
-                    <a key={index} href={item.href} className="flex items-center space-x-3 text-slate-300 hover:text-teal-400 transition-colors">
-                      <item.icon className="h-5 w-5 text-purple-400" />
+                    <a key={index} href={item.href} className="flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors">
+                      <item.icon className="h-5 w-5 text-orange-400" />
                       <span>{item.value}</span>
                     </a>
                   ))}
@@ -66,18 +66,18 @@ const Contact = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-slate-800/50 border-purple-700">
+            <Card className="bg-slate-800/50 border-orange-700">
               <CardContent className="p-8">
                 <h3 className="text-2xl font-semibold text-white mb-6">Connect With Me</h3>
                 <div className="space-y-4 mb-6">
                   {socialLinks.map((link, index) => (
-                    <a key={index} href={link.href} className="flex items-center space-x-3 text-slate-300 hover:text-teal-400 transition-colors">
-                      <link.icon className="h-5 w-5 text-purple-400" />
+                    <a key={index} href={link.href} className="flex items-center space-x-3 text-slate-300 hover:text-blue-400 transition-colors">
+                      <link.icon className="h-5 w-5 text-orange-400" />
                       <span>{link.label}</span>
                     </a>
                   ))}
                 </div>
-                <Button asChild className="w-full bg-purple-600 hover:bg-purple-700">
+                <Button asChild className="w-full bg-orange-600 hover:bg-orange-700">
                   <a href="mailto:ahmedhassanAlegmail.com">Send Email</a>
                 </Button>
               </CardContent>
