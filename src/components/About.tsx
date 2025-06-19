@@ -1,15 +1,14 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { MapPin, GraduationCap, Calendar } from "lucide-react";
 
 const About = () => {
   return (
-    <section id="about" className="py-20 px-4">
-      <div className="container mx-auto">
+    <section id="about" className="py-20 px-4" data-aos="fade-up">
+      <div className="container mx-auto" data-aos="fade-up" data-aos-delay="200">
         <h2 className="text-4xl font-bold text-white text-center mb-16">About Me</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-6" data-aos="fade-right" data-aos-delay="400">
             <p className="text-lg text-slate-300 leading-relaxed">
               I'm a dedicated Computer Science student with a strong foundation in programming, algorithms, and data structures. 
               I have experience in backend development with a specialization in Node.js and Express.js, coupled with a proven ability to solve complex problems through competitive programming.
@@ -20,14 +19,14 @@ const About = () => {
             </p>
           </div>
           
-          <Card className="bg-slate-800/50 border-orange-700">
+          <Card className="bg-slate-800/50 border-orange-700" data-aos="fade-left" data-aos-delay="600">
             <CardContent className="p-8">
               <h3 className="text-2xl font-semibold text-white mb-6">Education</h3>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <GraduationCap className="h-6 w-6 text-blue-400 mt-1" />
                   <div>
-                    <h4 className="text-lg font-semibold text-white">Bachelor of Science in Computer Science</h4>
+                    <h4 className="text-lg font-semibold text-white">Bachelor of Computer Science</h4>
                     <p className="text-slate-300">Alexandria University</p>
                   </div>
                 </div>

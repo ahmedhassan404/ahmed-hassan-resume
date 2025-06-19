@@ -1,40 +1,22 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Progress } from "@/components/ui/progress";
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Programming Languages",
-      skills: [
-        { name: "C/C++", level: 90 },
-        { name: "Java", level: 85 },
-        { name: "JavaScript", level: 80 },
-        { name: "Python", level: 75 }
-      ]
+      skills: ["C/C++", "Java", "JavaScript", "Python"]
     },
     {
       title: "Frameworks & Libraries",
-      skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Express.js", level: 80 }
-      ]
+      skills: ["Node.js", "Express.js"]
     },
     {
       title: "Databases",
-      skills: [
-        { name: "MySQL", level: 80 },
-        { name: "MongoDB", level: 75 }
-      ]
+      skills: ["MySQL", "MongoDB"]
     },
     {
       title: "Tools & Platforms",
-      skills: [
-        { name: "Git", level: 85 },
-        { name: "GitHub", level: 85 },
-        { name: "Docker", level: 70 },
-        { name: "AWS Basics", level: 65 }
-      ]
+      skills: ["Git", "GitHub", "Docker", "AWS Basics"]
     }
   ];
 
@@ -47,26 +29,33 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 px-4">
+    <section id="skills" className="py-20 px-4" data-aos="fade-up">
       <div className="container mx-auto">
         <h2 className="text-4xl font-bold text-white text-center mb-16">Technical Skills</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="bg-slate-800/50 border-blue-700">
-              <CardHeader>
-                <CardTitle className="text-white text-xl">{category.title}</CardTitle>
+            <Card 
+              key={index} 
+              className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20" 
+              data-aos="fade-up" 
+              data-aos-delay={200 + index * 100}
+            >
+              <CardHeader className="pb-4">
+                <CardTitle className="text-white text-xl font-semibold">{category.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-4">
-                  {category.skills.map((skill) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between mb-2">
-                        <span className="text-slate-300">{skill.name}</span>
-                        <span className="text-orange-400">{skill.level}%</span>
-                      </div>
-                      <Progress value={skill.level} className="h-2" />
-                    </div>
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span 
+                      key={skill} 
+                      className="px-4 py-2 bg-blue-900/50 text-blue-300 rounded-lg text-sm font-medium hover:bg-blue-800/60 hover:text-blue-200 transition-all duration-200 cursor-default"
+                      style={{
+                        animationDelay: `${skillIndex * 0.1}s`
+                      }}
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </CardContent>
@@ -74,14 +63,20 @@ const Skills = () => {
           ))}
         </div>
         
-        <Card className="bg-slate-800/50 border-blue-700">
-          <CardHeader>
-            <CardTitle className="text-white text-xl">Core Concepts</CardTitle>
+        <Card className="bg-slate-800/50 border-blue-700 hover:bg-slate-800/70 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20" data-aos="fade-up" data-aos-delay="600">
+          <CardHeader className="pb-4">
+            <CardTitle className="text-white text-xl font-semibold">Core Concepts</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="flex flex-wrap gap-3">
-              {concepts.map((concept) => (
-                <span key={concept} className="px-4 py-2 bg-blue-900/50 text-blue-300 rounded-lg text-sm font-medium">
+              {concepts.map((concept, index) => (
+                <span 
+                  key={concept} 
+                  className="px-4 py-2 bg-blue-900/50 text-blue-300 rounded-lg text-sm font-medium hover:bg-blue-800/60 hover:text-blue-200 transition-all duration-200 cursor-default"
+                  style={{
+                    animationDelay: `${index * 0.1}s`
+                  }}
+                >
                   {concept}
                 </span>
               ))}
